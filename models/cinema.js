@@ -46,15 +46,16 @@ Cinema.prototype.totalRunning = function() {
 
 Cinema.prototype.filter = function(category, value) {
   const films = this.films.filter((film) => {
-    if (category == "title") {
-      return film.title == value;
-    } else if (category == "genre") {
-      return film.genre == value;
-    } else if (category == "length") {
-      return film.length == value;
-    } else {
-      return film.year == value;
-    }
+    // if (category == "title") {
+    //   return film.title == value;
+    // } else if (category == "genre") {
+    //   return film.genre == value;
+    // } else if (category == "length") {
+    //   return film.length == value;
+    // } else {
+    //   return film.year == value;
+    // }
+    return film[category] == value
   })
   return films
 }
